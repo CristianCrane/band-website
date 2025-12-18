@@ -17,7 +17,7 @@
         --h2: calc(var(--h3) * var(--base-font-scale));
         --h1: calc(var(--h2) * var(--base-font-scale));
 
-        --font-family: "Roboto"
+        --font-family: "Roboto";
     }
 
     html {
@@ -147,6 +147,21 @@
     header img {
         max-width: 150px;
     }
+
+    @media (min-width: 800px) {
+        .wrapper {
+            max-width: 800px;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .wrapper {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 0 2rem;
+        }
+    }
 }
 
 @layer tour {
@@ -162,6 +177,25 @@
     .club {
         color: var(--lime);
         font-size: var(--h5);
+    }
+
+    @media (min-width: 800px) {
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 8rem;
+        }
+
+        main h1 {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        main {
+            grid-area: 1 / 2 / 4 / 3;
+            display: block;
+        }
     }
 }
 
@@ -185,6 +219,14 @@
 
     cite {
         font-style: normal;
+    }
+
+    @media (min-width: 800px) {
+        aside {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
     }
 }
 
