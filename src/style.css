@@ -19,9 +19,12 @@
         --h2: calc(var(--h3) * var(--base-font-scale));
         --h1: calc(var(--h2) * var(--base-font-scale));
 
-        --font-family-sans-serif: Outfit, sans-serif;
-        --font-family-serif: "Cormorant Garamond", serif;
-        --font-family-cursive: Pacifico, cursive;
+        --font-family-sans-serif: Outfit;
+        --font-family-serif: "Cormorant Garamond";
+        --font-family-cursive: Pacifico;
+
+        --mobile: 375px;
+        --tablet: 600px;
     }
 
     html {
@@ -63,17 +66,6 @@
     figure, blockquote {
         margin: 0;
         padding: 0;
-    }
-
-    .colors {
-        display: flex;
-        gap: 1rem
-    }
-
-    .colors > div {
-        width: 3rem;
-        height: 3rem;
-        border: grey solid 1px;
     }
 
     .lime {
@@ -158,7 +150,7 @@
         color: var(--magenta);
         white-space: nowrap;
         min-width: 10rem;
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
         text-align: center;
     }
 
@@ -172,6 +164,12 @@
         border-color: var(--magenta50);
         pointer-events: none;
         background: linear-gradient(to top right, transparent calc(50% - 1px), var(--magenta50), transparent calc(50% + 1px));
+    }
+
+    @media (min-width: 768px) {
+        .wrapper {
+            max-width: var(--tablet);
+        }
     }
 }
 
@@ -187,12 +185,26 @@
     }
 
     header nav a {
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
         text-decoration: none;
         color: white;
         padding-left: 1rem;
         line-height: 2rem;
         font-size: var(--h6);
+    }
+
+    @media (min-width: 768px) {
+        header {
+            align-items: center;
+        }
+
+        header img {
+            width: 250px;
+        }
+
+        header nav a {
+            font-size: var(--h5);
+        }
     }
 }
 
@@ -201,13 +213,21 @@
         padding-top: 2rem;
     }
 
+    .album img {
+        border: 2px solid var(--cyan);
+    }
+
+    .slider img {
+        border: none;
+    }
+
     .player {
         padding-top: 1rem;
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: center;
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
     }
 
     .player button {
@@ -222,6 +242,10 @@
     .player img {
         width: 1rem;
         height: 1rem;
+    }
+
+    .player span {
+        font-size: var(--h6);
     }
 
     #song-name {
@@ -277,7 +301,7 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
     }
 
     .col-span-2 {
@@ -293,20 +317,32 @@
         gap: 1rem;
     }
 
-    .reviews img {
+    .reviews blockquote img {
         width: 1rem;
         height: 1rem;
+        display: initial;
+    }
+
+    .reviews img {
+        display: none;
+    }
+
+    .review-images-tablet {
+        display: none;
+        grid-area: 2 / 1 / 2 / 3;
+        gap: 2rem;
+        margin: 2rem 0 2rem -4.5rem;
     }
 
     .promo {
         margin-top: 2rem;
         border: 2px solid var(--cyan);
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
         padding: 0.5rem;
     }
 
     .promo small {
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
     }
 
     .promo h1 {
@@ -316,6 +352,31 @@
         margin: .25rem;
         padding: 0;
         font-weight: 400;
+    }
+
+    @media (min-width: 768px) {
+        .player span {
+            font-size: inherit;
+        }
+
+        .reviews {
+            border: 2px solid var(--cyan);
+            margin: 3rem 0;
+            padding: 1.5rem;
+        }
+
+        .review-img {
+            border: 1px solid white;
+            width: 200px;
+        }
+
+        .review-images-tablet {
+            display: flex;
+        }
+
+        .review-images-tablet img {
+            display: initial;
+        }
     }
 }
 
@@ -335,7 +396,7 @@
     }
 
     td {
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
     }
 
     th, td {
@@ -348,7 +409,7 @@
     }
 
     .time-cell {
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), cursive;
         color: var(--magenta);
     }
 }
@@ -376,13 +437,13 @@
         margin: 1rem 0;
         display: flex;
         justify-content: space-between;
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
         font-size: var(--h6);
         text-transform: uppercase;
     }
 
     .copy {
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
         font-size: var(--h6);
     }
 
@@ -400,23 +461,23 @@
     }
 
     #tour-page h1 {
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
         grid-column: span 2;
     }
 
     #tour-page .date {
-        font-family: var(--font-family-cursive);
+        font-family: var(--font-family-cursive), cursive;
         color: var(--tan);
     }
 
     #tour-page .club {
-        font-family: var(--font-family-serif);
+        font-family: var(--font-family-serif), serif;
         color: var(--lime);
         text-transform: uppercase;
     }
 
     #tour-page p {
-        font-family: var(--font-family-sans-serif);
+        font-family: var(--font-family-sans-serif), serif;
         text-align: left;
     }
 
