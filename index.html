@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,171 +16,216 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="/">
-          <img
-            src="https://assets.codepen.io/296057/fem-maglime-logo.svg"
-            alt="the band"
-          />
-        </a>
+        <a href="/"
+          ><img
+            src="/public/fem-magline-logo-straight.svg"
+            alt="Magenta Lime. Click for home."
+        /></a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="tour.html">Tour</a>
+          <a href="store.html">Store</a>
+        </nav>
       </header>
-      <div class="banner">
-        <picture>
-          <source
-            srcset="https://assets.codepen.io/296057/fem-blindfold-1200.jpg"
-            media="(min-width: 800px)"
-          />
-          <img
-            src="https://assets.codepen.io/296057/fem-blindfold-475.jpg"
-            alt="homies in blindfolds yuh"
-          />
-        </picture>
-      </div>
       <main>
-        <h1>Tour</h1>
-        <p>
-          <span class="date">31 July 2023</span><br />
-          <span class="club">The IVY</span><br />
-          Oakheart, CA
-        </p>
-        <p>
-          <span class="date">02 August 2023</span><br />
-          <span class="club">Club Ecstasy</span><br />
-          Longdale, CA
-        </p>
-        <p>
-          <span class="date">08 August 2023</span><br />
-          <span class="club">The Summit</span><br />
-          Carran, OR
-        </p>
-        <p>
-          <span class="date">10 August 2023</span><br />
-          <span class="club">Empire</span><br />
-          Goldenleaf, CA
-        </p>
-        <p>
-          <span class="date">18 August 2023</span><br />
-          <span class="club">The Thunder</span><br />
-          Stathford, OR
-        </p>
-        <p>
-          <span class="date">06 September 2023</span><br />
-          <span class="club">The Gate</span><br />
-          Monmouth, WA
-        </p>
-        <p>
-          <span class="date">11 September 2023</span><br />
-          <span class="club">Horizon</span><br />
-          Colkirk, WA
-        </p>
+        <div class="album">
+          <picture>
+            <img
+              src="/public/fem-album.png"
+              alt="Album art for Magenta Lime's 'It was all a dream'"
+            />
+          </picture>
+          <div class="player">
+            <small id="song-name">Bombshell Looks</small>
+            <div id="play-btn">
+              <button>
+                <img src="/public/play-button.svg" alt="play/pause button" />
+              </button>
+            </div>
+            <small id="track-number">Track 7</small>
+            <div class="slider col-span-2">
+              <span>0:00</span>
+              <input id="seek" type="range" aria-label="Song slider" />
+              <span>1:21</span>
+            </div>
+            <div class="slider">
+              <span>50</span>
+              <input id="volume" type="range" aria-label="Volume slider" />
+              <img src="/public/volume.svg" alt="volume icon" />
+            </div>
+            <audio>
+              <source src="/public/fem-bombshell.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+        <div class="reviews">
+          <figure>
+            <blockquote>
+              <p>Just WOW</p>
+              <img src="/public/fem-star.svg" alt="4 stars" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+            </blockquote>
+            <figcaption>The Staple</figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              <p>Best. Album. Ever.</p>
+              <img src="/public/fem-star.svg" alt="4 stars" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+            </blockquote>
+            <figcaption>Gold Spin</figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              <p>I can't stop listening</p>
+              <img src="/public/fem-star.svg" alt="5 stars" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+            </blockquote>
+            <figcaption>Draft Media</figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              <p>These guys know how to party</p>
+              <img src="/public/fem-star.svg" alt="5 stars" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+              <img src="/public/fem-star.svg" alt="" />
+            </blockquote>
+            <figcaption>Draft Media</figcaption>
+          </figure>
+        </div>
+        <div class="promo">
+          <small>New album</small>
+          <h1>It was all a dream</h1>
+          <a href="order.html" class="text-small">Order now</a>
+        </div>
       </main>
       <aside>
-        <div class="imggroup">
-          <img
-            src="https://assets.codepen.io/296057/fem-purple-arms.jpg"
-            alt="Purple stage and excited crowd."
-          />
-          <figure>
-            <blockquote>
-              Just WOW<br />
-              <div class="stars">
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt="Four star rating."
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-              </div>
-            </blockquote>
-            <figcaption><cite>The Staple</cite></figcaption>
-          </figure>
-        </div>
-        <div class="imggroup">
-          <img
-            src="https://assets.codepen.io/296057/fem-fireworks.jpg"
-            alt="Red stage with fireworks and excited crowd."
-          />
-          <figure>
-            <blockquote>
-              Best. Album. Ever.<br />
-              <div class="stars">
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt="Four star rating."
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-              </div>
-            </blockquote>
-            <figcaption><cite>Gold Spin</cite></figcaption>
-          </figure>
-        </div>
-        <div class="imggroup">
-          <img
-            src="https://assets.codepen.io/296057/fem-blue-arms.jpg"
-            alt="Blue smoky stage and crowd with person raising arms."
-          />
-          <figure>
-            <blockquote>
-              I can't stop listening<br />
-              <div class="stars">
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt="Four star rating."
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-                <img
-                  src="https://assets.codepen.io/296057/fem-star.svg"
-                  alt=""
-                  class="star"
-                />
-              </div>
-            </blockquote>
-            <figcaption><cite>Draft Media</cite></figcaption>
-          </figure>
-        </div>
+        <table>
+          <tr>
+            <th class="header-cell">Track</th>
+            <th class="header-cell">Song</th>
+            <th class="header-cell">Time</th>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+          <tr>
+            <td class="track-cell">1</td>
+            <td class="song-cell">Casino of Tricks</td>
+            <td class="time-cell">2:01</td>
+          </tr>
+        </table>
       </aside>
+      <footer>
+        <ul class="social">
+          <li>
+            <a href=""
+              ><img src="/public/fem-instagram.svg" alt="Instagram Icon"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="/public/fem-spotify.svg" alt="Spotify Icon"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="/public/fem-soundcloud.svg" alt="SoundCloud Icon"
+            /></a>
+          </li>
+        </ul>
+        <div class="legal">
+          <a href="">Privacy Policy</a>
+          <a href="">Contact</a>
+        </div>
+        <div class="copy">&copy; 2023 <span>Magenta Lime</span></div>
+      </footer>
     </div>
-    <footer>
-      <p><a href="#">Contact</a></p>
-      <p>&copy; 2023 Magenta Lime</p>
-    </footer>
   </body>
 </html>
